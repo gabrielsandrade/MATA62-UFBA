@@ -15,8 +15,6 @@ def scrapeYear(year, yearTitle):
     path = os.path.join('data')
     if not os.path.exists(path):
         os.makedirs(path)
-        #index this.selected.lenght
-    #this.$set(this.selected, index, item)
     for index, link in enumerate(fileLinks) :
         try:
             if yearTitle in link['href'] : 
@@ -27,8 +25,8 @@ def scrapeYear(year, yearTitle):
                 if not os.path.exists(filePath):
                     wget.download(link['href'], out=filePath)
                 else : print("Arquivo já foi baixado anteriorment.")
-        except Exception as e :
-            print (e)
+        except :
+            pass
 
 def main () :
     response = urlopen(url)

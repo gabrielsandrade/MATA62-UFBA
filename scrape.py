@@ -26,6 +26,8 @@ def scrapeYear(year, yearTitle):
                     wget.download(link['href'], out=filePath)
                     if (extension == 'zip'):
                         unzip(filePath, fileName)
+                    if (extension == 'xlsx') :
+                        convertToCsv(filePath, fileName)
                 else:
                     print("Arquivo já foi baixado anteriorment.")
         except:

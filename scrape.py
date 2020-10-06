@@ -29,7 +29,7 @@ def scrapeYear(year, yearTitle):
                     if (extension == 'xlsx') :
                         convertToCsv(filePath, fileName)
                 else:
-                    print("Arquivo já foi baixado anteriorment.")
+                    print("Arquivo já foi baixado anteriormente.")
         except:
             pass
 
